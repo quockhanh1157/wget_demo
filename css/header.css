@@ -1,0 +1,148 @@
+header {
+  height: clamp(721px, 65vw, 883px);
+  background: url("../img/header_1.jpeg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 30px 32px 0 32px;
+}
+
+.banner__sales {
+  /*display: none;*/
+  color: white;
+  background: black;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner__sales--time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.banner__sales--time div {
+  display: flex;
+  flex-direction: column;
+}
+
+.banner__sales--time div span:nth-child(1) {
+  line-height: 16px;
+}
+
+.banner__sales--time div span:nth-child(2) {
+  font-size: 9px;
+  line-height: 10px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+.header .header__menu,
+.header .header__logo,
+.header .header__nav {
+  flex: 1;
+}
+
+.header__menu {
+  display: flex;
+  gap: 8px;
+}
+
+.header__menu--lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.line {
+  display: block;
+  height: 1px;
+  background-color: white;
+  border-radius: 2px;
+  width: clamp(19px, 5vw, 25px);
+}
+
+.header__menu--toggle {
+
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.header__logo {
+  text-align: center;
+}
+
+.header__logo span {
+  position: relative;
+}
+
+.header__logo span::after {
+  content: "";
+  background: url("../img/orange-svgrepo-com 1.svg") no-repeat center center;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  bottom: 2px;
+  left: -22px;
+}
+
+.header__nav {
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+
+.header__link--search {
+  position: relative;
+}
+
+.header__link--search::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30%;
+  transform: translateY(-50%);
+  background: url(../img/icon_search.svg) no-repeat center center;
+  width: 16px;
+  height: 16px;
+  display: inline-block
+}
+
+header > h1 {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: 400;
+  font-size: clamp(48px, 10vw, 64px);
+  line-height: clamp(54px, 10vw, 74px);
+  text-align: center;
+  width: clamp(342px, 50vw, 822px);
+  font-family: Lora, "Times New Roman", Times, serif;
+  letter-spacing: 0.3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .banner__sales > p > span {
+    display: none;
+  }
+  .header__nav > a:not(:nth-child(3)) {
+    display: none;
+  }
+}

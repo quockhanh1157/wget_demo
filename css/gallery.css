@@ -1,0 +1,96 @@
+.gallery {
+  position: relative;
+}
+
+.gallery .gallery__list {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.gallery .gallery__list .gallery__item img {
+  width: clamp(319px, 50vw, 453px);
+  height: clamp(535px, 50vw, 800px);
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.gallery__item {
+  flex: 0 0 auto;
+  width: clamp(319px, 50vw, 453px);
+  height: clamp(535px, 50vw, 800px);
+  object-fit: cover;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.gallery .gallery__control {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  background: white;
+  padding: 16px;
+  border: 0;
+  z-index: 10;
+}
+
+.gallery .gallery__control.gallery__control--next {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.gallery .gallery__control.gallery__control--prev {
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+
+.gallery .gallery__control.gallery__control--next {
+  right: 0;
+}
+
+.gallery .gallery__control.gallery__control--next::before,
+.gallery .gallery__control.gallery__control--prev::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/icon_arrow.svg) no-repeat center center;
+  width: 32px;
+  height: 32px;
+}
+
+.gallery .gallery__control.gallery__control--next::before {
+  transform: rotate(180deg);
+}
+
+.gallery__item p,
+.gallery__item a {
+  position: absolute;
+  bottom: 42px;
+  left: 46px;
+  color: white;
+}
+
+.gallery__item p {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0;
+  margin-bottom: 24px;
+}
+
+.gallery__item a {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-style: solid;
+}
